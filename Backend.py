@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, send_file
 import os
 from pathlib import Path
 
@@ -29,13 +29,13 @@ def printEachFile():
 def listRoute():
     return printEachFile()
 
-@app.route("/downloads/<name>", methods =["GET"])
-def downloadRoute():
-   data = request.files.get("file")
 
-   for i in printEachFile():
-      if i == data.filename:
-          return i
+@app.route("/downloads/<name>", methods =["GET"])
+def downloadRoute(name):
+ path = Path('MyFiles')
+ file_path = os.path.join(path, name)
+ return send_file(file_path, as_attachment=True)
+       
    
 if __name__ == "__main__":
     app.run(debug=True)
