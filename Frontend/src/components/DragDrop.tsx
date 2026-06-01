@@ -35,9 +35,9 @@
 
     border: "1px dashed gray",
     borderColor: "#65626251",
-    padding: "250px",
-    height: "80px",
-    width: "500px",
+    padding: "19%",
+    height: "11%",
+    width: "36%",
 
       }}
     >

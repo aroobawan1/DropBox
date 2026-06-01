@@ -76,7 +76,7 @@ function FileList(){
      return (
     <div style={{
     position: "fixed",
-    top: "500px",
+    top: "60%",
     left: "50%",
     transform: "translateX(-50%)",
   }}>
